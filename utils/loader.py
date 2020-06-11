@@ -50,11 +50,12 @@ class DragRaceLoader:
                 self.seasons[season_name] = Season(
                     id=len(self.seasons) + 1,
                     name=season_name,
+                    season_number=row.get("season_number"),
                     season_type=row.get("season_type"),
                 )
 
-            week_number = row.get("week_number")
-            episode_key = f"{season_name}_{week_number}"
+            episode_numner = row.get("episode_number")
+            episode_key = f"{season_name}_{episode_numner}"
 
             if episode_key not in self.episodes:
                 season = self.seasons.get(season_name)
@@ -67,7 +68,7 @@ class DragRaceLoader:
                     air_date=date_obj,
                     main_challenge_desc=row.get("main_challenge_desc", ""),
                     mini_challenge_desc=row.get("mini_challenge_desc", ""),
-                    week_number=int(week_number),
+                    episode_number=int(episode_numner),
                 )
 
             queen = self.queens.get(queen_name)

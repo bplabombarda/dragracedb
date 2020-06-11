@@ -12,6 +12,12 @@ class LipSync(models.Model):
     song = models.TextField(default='')
     artist = models.TextField(default='')
 
+    def song_artist_notation(self):
+        return f"{self.song} by {self.artist}"
+
+    def __str__(self):
+        return f"{self.episode.__str__()} {self.song} - {self.artist}"
+
 
 class LipSyncQueen(models.Model):
     class Meta:
