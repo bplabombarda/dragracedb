@@ -83,13 +83,13 @@ WSGI_APPLICATION = 'dragracedb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'dragrace-db.ctzdfjcg91uv.us-east-2.rds.amazonaws.com',
-        'NAME': 'dragracedb',
+        'HOST': '',
+        'NAME': '',
         'OPTIONS': {
-            'options': '-c search_path=dragracedb',
+            'options': '-c search_path=',
         },
-        'PASSWORD': 'YsUkTUDEJeG7RggQ',
-        'USER': 'master',
+        'PASSWORD': '',
+        'USER': '',
     }
 }
 
